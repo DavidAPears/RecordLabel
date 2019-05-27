@@ -1,0 +1,159 @@
+.curriculum-vitae {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  padding-top: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FAKE 'CODE' CV SECTION (Start) */
+
+.window {
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left:15%;
+	width: 70%;
+	/* margin: 3vw; */
+	background-color: #000;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00e5e5, 0 0 30px #00e5e5, 0 0 40px #00e5e5, 0 0 55px #00e5e5, 0 0 75px #00e5e5;
+}
+
+.window-top {
+	display: flex;
+	align-items: center;
+	height: 30px;
+	background-color: #202020;
+}
+
+.window__controls {
+	display: inline-flex;
+}
+
+.window__controls span {
+	width: 15px;
+	height: 15px;
+	margin-left: 10px;
+	border-radius: 50%;
+}
+
+.window__controls span:nth-child(1) {
+	background-color: #b22222;
+}
+.window__controls span:nth-child(2) {
+	background-color: #d6bf3e;
+}
+.window__controls span:nth-child(3) {
+	background-color: #4db434;
+}
+
+.window__title {
+	flex: 1;
+	text-align: center;
+	color: #b1b1b3;
+}
+
+.window-main {
+	padding: 0.5em;
+	color: #4e4e4e;
+}
+
+.window-main ol {
+	counter-reset: item;
+	font-family: "Source Code Pro", monospace;
+}
+
+.window-main ol li {
+	margin-bottom: 3px;
+}
+
+.window-main ol li:before {
+	content: counter(item) "  ";
+	counter-increment: item;
+	padding: 0 10px;
+}
+
+ul,
+ol {
+  font-size: 2vh;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  padding-top: 2vh;
+}
+
+.tag {
+	color: #4d86b9;
+}
+.attr {
+	color: #8dc6e3;
+}
+.val {
+	color: #c58b74;
+}
+.text {
+	color: #d4d4d4;
+}
+.comment {
+	color: #517343;
+}
+.CVlink {
+  all: unset;
+	color: yellow;
+	cursor:pointer;
+  text-decoration: none;
+}
+.CVlink:hover
+{
+  color:#ff0080;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+@media only screen and (max-width: 601px) {
+	.window {
+    padding-top: 10vh;
+		width: 80%;
+    left: 10%;
+		height: 90%;
+		font-size: 0.65em;
+	}
+
+	.window__controls span {
+		width: 10px;
+		height: 10px;
+		margin-left: 5px;
+	}
+
+	.window-main ol li:before {
+		padding: 0;
+	}
+}
+/* 'CODE' CV SECTION (End) */
+
+.CV-instruction{
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+  background: linear-gradient(to right, #0059b3 20%, #ff0080 40%, #ff0080 60%, #0059b3 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+}

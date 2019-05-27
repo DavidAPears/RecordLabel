@@ -1,0 +1,100 @@
+.contact {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 4vh;
+  background-color: white;
+  /* background-color: transparent; */
+  margin: 5vh;
+  margin-top: 11vh;
+  padding: 3vh;
+  border-radius: 10px;
+  text-align: center;
+  content: center;
+}
+
+ .contact:after, .contact:before{
+   font-family: 'Raleway', sans-serif;
+   position:absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   content:"";
+   z-index:-1;
+ }
+
+ .contact:after{
+   background:radial-gradient(circle,#ff0080,transparent);
+   background-size:400%;
+   animation:colorSpin 30s linear infinite;
+ }
+
+ .contact:before{
+   background-color:#00e5e5;
+ }
+
+
+ /* ANIMATED GRADIENT TAG LINE (Start)  */
+.contact-linear-wipe{
+    font-size: 4vh;
+    text-align: center;
+    background: linear-gradient(to right, #00e5e5 20%, #ff0080 40%, #ff0080 60%, #00e5e5 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 3s linear infinite;
+            animation: shine 3s linear infinite;
+  }
+  @-webkit-keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  /* ANIMATED GRADIENT TAG LINE (End) */
+
+
+/* CONTACT ICONS (Start) */
+.contact-icon {
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  position: center;
+  border: none;
+  border-radius: 10px;
+	background: none;
+	color: #f2f2f2;
+	padding: 1vh;
+	position: relative;
+	box-sizing: border-box;
+	transition: all 500ms ease;
+}
+.contact-icon:hover {
+	background: #ff0080;
+  animation: bounce 1s;
+}
+
+.phone {
+  color: #ff0080;
+  font-size: 3vh;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none !important;
+  font-weight: bolder;
+}
+/* CONTACT ICONS (End) */
+
+/* CV DOWNLOAD 'CLOUD' LINK (Start) */
+.cvdownload {
+  font-size: 2vh;
+  color: #00e5e5;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* CV DOWNLOAD 'CLOUD' LINK (End) */

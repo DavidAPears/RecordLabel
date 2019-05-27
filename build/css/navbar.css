@@ -1,0 +1,167 @@
+/* BURGER NAVIGATION (Starts) */
+#menu--toggle[type="checkbox"]:not(:checked),
+#menu--toggle[type="checkbox"]:checked {
+  display: none;
+}
+
+.menu--toggle__trigger,
+.menu--toggle__burger,
+.menu--toggle__burger:before,
+.menu--toggle__burger:after {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 2em;
+  height: 7px;
+  background-color: #282828;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.menu--toggle__trigger {
+  height: 2em;
+  background: none;
+}
+
+.menu--toggle__burger:before {
+  content: "";
+  top: 10px;
+  left: 0;
+}
+.menu--toggle__burger:after {
+  content: "";
+  top: 20px;
+  left: 0;
+}
+
+.menu__body {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-bottom-right-radius: 50%;
+  z-index: 10;
+  -webkit-animation: checkboxUncheckedAnimation 0.1s both;
+          animation: checkboxUncheckedAnimation 0.1s both;
+}
+
+.menu__body-element,
+.menu__body-link {
+  font-family: 'Raleway', sans-serif;
+  display: none;
+  margin: 2em 0 -0.3em -.1em;
+  font-weight: bolder;
+  color: #ff0080;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+  outline: 0;
+}
+
+.menu__body-element {
+  text-indent: .5em;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.menu__body-link:hover {
+  display: block;
+  width: 0;
+  color: #00e5e5;
+  background-color: none ;
+  -webkit-animation: changeWidthOfElementAnimation 0.35s both;
+          animation: changeWidthOfElementAnimation 0.35s both;
+}
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger {
+  top: 35px;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger + .menu__body {
+  -webkit-animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+          animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+#menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-element, #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-link {
+  display: block;
+}
+
+/* .promotion {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(" ");
+  background-size: cover;
+} */
+
+@-webkit-keyframes checkboxCheckedAnimation {
+  50% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+@keyframes checkboxCheckedAnimation {
+  50% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+@-webkit-keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@-webkit-keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* BURGER NAVIGATION (Ends) */

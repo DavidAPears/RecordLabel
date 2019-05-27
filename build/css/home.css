@@ -1,0 +1,325 @@
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+
+.home {
+  height:100%;
+  width:100%;
+}
+
+/* ANIMATED GRADIENT 'DAVID PEARS' (Start) */
+.linear-wipe {
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+  padding-top: 13vh;
+  padding-bottom: 5vh;
+  font-size: 9vh;
+  font-weight: lighter;
+  text-align: center;
+  background: linear-gradient(to right, #66c8c9 20%, #ff0080 40%, #ff0080 60%, #66c8c9 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+/* ANIMATED GRADIENT 'DAVID PEARS' (End) */
+
+/* PAPER 'SOFTWARE DEVELOPER'LETTERS ON HOME PAGE (Start)  */
+div.app-title{
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter{
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 6vw;
+  margin: 0.1em;
+  position: relative;
+  color: #66c8c9;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: white;
+  text-shadow:
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: white;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+/* PAPER 'SOFTWARE DEVELOPER'LETTERS ON HOME PAGE (End)  */
+
+/* FOX GIF (Start) */
+.fox-gif{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+/* FOX GIF (End) */
+
+/* CORNER RIBBON (Start) */
+.corner-ribbon{
+  Font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 2vh;
+  text-shadow: none;
+  width: 225px;
+  background: #00e5e5;
+  position: absolute;
+  top: 25px;
+  left: -100px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+  text-decoration: none !important;
+  font-weight: bolder;
+}
+
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/* CORNER RIBBON (End) */
+
+
+
+/* 'HELLO WORLD' BANNER (Start) */
+.content {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 160px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.8vh;
+  line-height: 40px;
+  color: grey;
+  padding-top: 15vh;
+}
+.content__container {
+  font-weight: 600;
+  margin: auto;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+.content__container:before {
+  padding-top: 15vh;
+  content: '[';
+  left: 0;
+}
+.content__container:after {
+  padding-top: 15vh;
+  content: ']';
+  position: absolute;
+  right: 0;
+}
+.content__container:after, .content__container:before {
+  position: absolute;
+  top: 0;
+  color: #ff0080;
+  font-size: 42px;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.content__container__text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+ .content__container__list {
+  margin-top: 0;
+  padding-left: 110px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+  33.32%,45.98% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  49.98%,62.64% {
+    -webkit-transform: translate3d(0, -75%, 0);
+            transform: translate3d(0, -75%, 0);
+  }
+  66.64%,79.3% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  83.3%,95.96% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%, 12.66%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+  33.32%,45.98% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  49.98%,62.64% {
+    -webkit-transform: translate3d(0, -75%, 0);
+            transform: translate3d(0, -75%, 0);
+  }
+  66.64%,79.3% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  83.3%,95.96% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+}
+/* 'HELLO WORLD' BANNER (End) */
+
+/*
+.content__container__text   {
+  font-family:  Consolas, monospace;
+  width: 16ch;
+  width: 8.75em;
+  color: black;
+  white-space: nowrap;
+  position: relative;
+  overflow:hidden;
+  animation: typing 4s steps(16, end);
+}
+
+.content__container__text :before {
+  font-family: FontAwesome;
+  color: black;
+  font-size: 24px;
+}
+
+.content__container__text  span {
+  border-right: .1em solid;
+  color: black;
+  position:absolute;
+  top:0;
+  right:0;
+  width:0;
+  animation: blink-caret 1s step-end infinite;
+}
+
+i {
+  color: pink;
+  float: left;
+  font-size: 2.3em;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width:8.75em }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+*/

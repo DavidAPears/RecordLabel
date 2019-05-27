@@ -1,0 +1,111 @@
+.about {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  margin: 5vh;
+  border-radius: 10px;
+  text-align: center;
+  content: center;
+}
+
+/* PROFILE IMAGE (Start) */
+* { box-sizing: border-box; font-family: Avenir; }
+div#profile-container { display: flex; justify-content: center;; }
+div#profile-container figure {
+  display: inline-block;
+  position: relative;
+  }
+div#profile-container figure div {
+  border-radius: 50%;
+  overflow: hidden;
+  background-blend-mode: luminosity;
+  border: 4px solid #ff0080;
+  width: 15em; height: 15em;
+  transition: .4s linear;
+  will-change: contents;
+}
+div#profile-container figure div:hover {
+  border: 8px solid #00e5e5;
+  background-color: transparent;
+}
+.david {
+  background: url("/images/pears.jpg"); no-repeat center
+  hsl(200,50%,50%);
+  background-size: cover;
+}
+/* PROFILE IMAGE (End) */
+
+/* ABOUT CONTENT/COPY (Start) */
+.about-content {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 2vh;
+  padding: 1vh;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+/* ABOUT CONTENT/COPY (End) */
+
+/* LANGUAGE/TECH ICONS (Start) */
+.lang-icon {
+ border: none;
+ background: none;
+ color: #f2f2f2;
+ padding: 10px;
+ font-size: 18px;
+ border-radius: 15px;
+ position: relative;
+ box-sizing: border-box;
+ transition: all 500ms ease;
+}
+
+.lang-icon:hover {
+ /* background: #ff0080;
+ box-shadow: inset 0 0 0 3px #3a7999; */
+ animation: bounce 1s;
+ animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+@keyframes bounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+/* LANGUAGE/TECH ICONS (End) */
+
+
+/* ANIMATED PAGE COLOUR BACKGROUND (Start) */
+  div#profile-container:after, div#profile-container:before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content:"";
+    z-index:-1;
+  }
+
+  #profile-container:after{
+    background:radial-gradient(circle,#ff0080,transparent);
+    background-size:300%;
+    animation:colorSpin 15s linear infinite;
+  }
+
+  #profile-container:before{
+    background-color:#00e5e5;
+  }
+
+  @keyframes colorSpin{
+    25%{background-position:0 100%}
+    50%{background-position:100% 100%}
+    75%{background-position:100% 0}
+    100%{filter:hue-rotate(360deg)}
+  }
+}
+/* ANIMATED PAGE COLOUR BACKGROUND (End) */
