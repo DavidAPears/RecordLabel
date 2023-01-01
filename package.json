@@ -17,6 +17,6 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "webpack": "^4.29.0"
+    "webpack": "^5.75.0"
   }
 }
